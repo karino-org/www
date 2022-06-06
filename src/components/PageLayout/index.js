@@ -1,9 +1,19 @@
-import React from 'react';
+// package
+import React from "react";
+
+// styles
+import styles from "./PageLayout.module.sass";
+
+// Components
+import Header from "../Header";
+import Footer from "../Footer";
 
 const PageLayout = ({Component,pageProps}) => {
     return (
-        <div>
+        <div className={styles.wrapper}>
+            <Header />
             <Component {...pageProps} />
+            <Footer />
         </div>
     );
 };

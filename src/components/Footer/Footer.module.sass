@@ -1,0 +1,60 @@
+@import ../../styles/helpers
+
+.bodyWrapper
+    text-align: right
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    gap: 40px
+    border-top: 3px solid $n8
+    padding: 20px 0
+
+.description
+    img
+        height: 55px
+        margin-bottom: 16px
+    p
+        color: $n6
+
+.contactWrapper
+    margin-top: 23px
+
+.contact
+    display: flex
+    flex-direction: column
+    margin-top: 25px
+    gap: 20px
+    li
+        color: $n6
+
+.linkWrapper
+    margin-top: 23px
+
+.link
+    direction: rtl
+    list-style: disc
+    margin-top: 25px
+    display: flex
+    flex-direction: column
+    gap: 15px
+    li
+        color: $n6
+        transition: all 0.1s ease-in
+        &:hover
+            color: $n1
+
+        >a
+            transition: all 0.1s ease-in
+            color: $n6
+            text-decoration: none
+            &:hover
+                color: $n1
+            
+.copyrightWrapper
+    display: flex
+    justify-content: space-between
+    border-top: 3px solid $n8
+    padding: 20px 0
+
+.socialmedia
+    display: flex
+    gap: 20px

@@ -1,0 +1,29 @@
+@import ../../../styles/helpers
+
+
+.wrapper
+    display: grid
+    grid-template-columns: minmax(320px,440px) auto
+    gap: 20px
+    align-items: center
+
+.imageWrapper
+    img
+        width: 100%
+
+.detailWrapper
+    direction: rtl
+    >h2
+        margin-bottom: 20px
+    >h3
+        margin-bottom: 32px
+        color: $n6
+
+.downloadBtn
+    >div
+        display: flex
+        gap: 10px
+        margin-bottom: 10px
+        >button
+            width: 175px
+            cursor: pointer

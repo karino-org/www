@@ -1,11 +1,21 @@
-import React from 'react';
-import styles from "./Home.module.sass";
+// package
+import React from "react";
 
+// styles
+import styles from "./Home.module.sass";
+import cn from "classnames";
+
+// components
+import Download from "./Download";
+import Start from "./Start";
+import Hero from "./Hero";
 
 const Home = () => {
     return (
-        <div>
-            <h1>سلام دنیا</h1>
+        <div className="container">
+            <Hero />
+            <Start />
+            <Download />
         </div>
     );
 };

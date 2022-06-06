@@ -1,0 +1,47 @@
+=w
+    @media only screen and (max-width: "1419px")
+        @content
+=x
+    @media only screen and (max-width: "1339px")
+        @content
+=d
+    @media only screen and (max-width: "1179px")
+        @content
+=t
+    @media only screen and (max-width: "1023px")
+        @content
+=m
+    @media only screen and (max-width: "768px")
+        @content
+=a
+    @media only screen and (max-width: "639px")
+        @content
+=s
+    @media only screen and (max-width: "474px")
+        @content
+    
+@function toRem($value)
+    $remValue: ($value / 16) + rem
+    @return $remValue
+// color Pallet
+$primary: #4DA1F7
+$p1: #A5DFFC
+$p2: #63C0FD
+$p3: #3B89ED
+$p4: #2759AF
+
+$n1: #16171C
+$n2: #202329
+$n3: #2B2F37
+$n4: #363A45
+$n5: #4A4F5C
+$n6: #777C85
+$n7: #B4B6BB
+$n8: #E1E2E4
+$n9: #F3F4F6
+
+// Mixin
+@mixin center-all
+    display: flex
+    justify-content: center
+    align-items: center
