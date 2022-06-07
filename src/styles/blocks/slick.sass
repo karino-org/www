@@ -1,0 +1,52 @@
+
+.bid-slider
+    position: static
+    .slick-list
+        overflow: visible
+        +s
+            margin: 0 -215px 0 0
+    .slick-track
+        @include dis-flex
+    .slick-slide
+        height: auto
+        margin: 0 16px
+        opacity: 0
+        transition: opacity .4s
+        +m
+            margin: 0 8px
+        &.slick-active
+            opacity: 1
+        & > div
+            @include dis-flex
+            height: 100%
+            flex-grow: 1
+    .slick-arrow
+        position: absolute
+    .slick-prev
+        right: initial
+        z-index: 6
+        margin-top: 50px
+        margin-left: -50px
+    .slick-next
+        margin-top: -110px
+        right: 170px
+
+    .slick-dots
+        bottom: -80px
+
+        button
+            &::before
+                content: ''
+                width: 10px
+                height: 10px
+                border-radius: 50%
+                background: $primary
+                transition: background .2s
+        .slick-active
+            button
+                &::before
+                    color: $primary
+                    opacity: 1
+                    width: 20px
+                    border-radius: 20px
+

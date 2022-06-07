@@ -1,3 +1,4 @@
+@import ./helpers
 // Font-Family
 	
 @font-face 
@@ -63,12 +64,25 @@
 h1
 	font-size: 48.83px !important
 	font-weight: 700 
-h2
+	+x
+		font-size: 38.83px !important
+	+t
+		font-size: 28.83px !important
+h2  
 	font-size: 39.06px !important
 	font-weight: 700 
+	+x
+		font-size: 33px !important
+	+t
+		font-size: 25.63px !important
+
 h3
 	font-size: 31.25px !important
 	font-weight: 700 
+	+x
+		font-size: 26px !important
+	+t
+		font-size: 22.78px !important
 h4
 	font-size: 28.43px !important
 	font-weight: 700 
@@ -78,3 +92,6 @@ h5
 h6
 	font-size: 16px !important
 	font-weight: 700
+
+body
+    min-width: 375px

@@ -7,6 +7,9 @@
     gap: 40px
     border-top: 3px solid $n8
     padding: 20px 0
+    direction: rtl
+    +m
+        grid-template-columns: 1fr
 
 .description
     img
@@ -36,6 +39,8 @@
     display: flex
     flex-direction: column
     gap: 15px
+    +m
+        margin-right: 14px
     li
         color: $n6
         transition: all 0.1s ease-in
@@ -54,7 +59,12 @@
     justify-content: space-between
     border-top: 3px solid $n8
     padding: 20px 0
+    +m
+        flex-direction: column
 
 .socialmedia
     display: flex
     gap: 20px
+    +m
+        margin-bottom: 10px
+        justify-content: center

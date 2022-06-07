@@ -39,9 +39,18 @@ $n6: #777C85
 $n7: #B4B6BB
 $n8: #E1E2E4
 $n9: #F3F4F6
+$n10: #FFFFFF
 
 // Mixin
 @mixin center-all
     display: flex
     justify-content: center
     align-items: center
+
+@mixin dis-flex
+    display: -webkit-box
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flexbox
+    display: flex
+    @content

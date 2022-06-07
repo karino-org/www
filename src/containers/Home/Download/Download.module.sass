@@ -3,27 +3,50 @@
 
 .wrapper
     display: grid
-    grid-template-columns: minmax(320px,440px) auto
-    gap: 20px
+    grid-template-columns: 460px 1fr
+    grid-template-areas: "image header header""image detail detail""image btn btn"
     align-items: center
+    gap: 20px
+    +d
+        grid-template-columns: 330px 1fr
+    +m
+        grid-template-areas: "header""image""detail""btn"
+        grid-template-columns: 1fr
+        justify-content: center
+
 
 .imageWrapper
+    grid-area: image
+    display: flex
+    align-items: flex-end
+    +m
+        justify-content: center
     img
-        width: 100%
+        width: 450px
+        +d
+            width: 330px
+        +s
+            width: 270px
 
-.detailWrapper
+.title
+    grid-area: header
     direction: rtl
-    >h2
-        margin-bottom: 20px
-    >h3
-        margin-bottom: 32px
-        color: $n6
+    margin-top: 100px
+.detail
+    grid-area: detail
+    color: $n6
+    direction: rtl
 
 .downloadBtn
+    grid-area: btn
+    margin-bottom: 100px
     >div
+        justify-content: flex-end
         display: flex
         gap: 10px
         margin-bottom: 10px
+        +m
+            justify-content: center
         >button
             width: 175px
             cursor: pointer

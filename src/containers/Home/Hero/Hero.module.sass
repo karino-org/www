@@ -5,17 +5,42 @@
     margin: 82px 0 32px
 
 .titleWrapper
-    text-align: right
+    display: flex
+    direction: rtl
     >h1
         display: inline
 
-.xxx
-    color: $primary
+.headerAnimation
+    height: 70px
+    overflow: hidden
+    margin-right: 5px
+    h1
+        margin-bottom: 10px
+        color: $primary
+        position: relative
+
+.Animation1
+    animation: slide-one 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both
+
+.Animation2
+    animation: slide-two 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both
+
+
+.Animation3
+    animation: slide-three 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both
+
+
+.Animation4
+    animation: slide-four 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both
+
 
 .heroWrapper
     margin-top: 42px
     display: grid
-    grid-template-columns: minmax(320px,440px) auto
+    grid-template-columns: 30% 60%
+    gap: 50px
+    +m
+        grid-template-columns: 1fr
 
 .hero
     img
@@ -26,5 +51,119 @@
     grid-template-columns: 1fr 1fr
     gap: 20px
     margin-top: 82px
+    +m
+        grid-template-columns: 1fr
     img
         width: 100%
+
+.servicesWrapper
+    direction: rtl
+    margin-right: -50px
+
+.services
+    display: flex
+    gap: 15px
+    flex-wrap: wrap
+    margin-top: 20px
+
+.serviceTitle
+    @include center-all
+    border: 1px solid $n4
+    border-radius: 50px
+    height: 31px
+    padding: 0 15px
+    p
+        display: inline
+        span
+            margin-right: 5px
+
+.activeService
+    @include center-all
+    background: $p4
+    color: $n10
+    border-radius: 50px
+    height: 31px
+    padding: 0 15px
+    p
+        display: inline
+        span
+            margin-right: 5px
+
+.serviceSlider
+    width: 100%
+    overflow: hidden
+    margin-top: 44px
+.sliderItem
+    text-align: center
+    img
+        width: 155px !important
+    p
+        margin-top: 5px
+
+
+@keyframes slide-one
+    0% 
+        transform: translateY(0)
+    10% 
+        transform: translateY(0)
+    13%
+        transform: translateY(-20px)
+    20%
+        transform: translateY(100px)
+    50% 
+        transform: translateY(100px)
+    87% 
+        transform: translateY(100px)
+    92% 
+        transform: translateY(0)
+    100% 
+        transform: translateY(0)
+    
+@keyframes slide-two
+    0% 
+        transform: translateY(0)
+    15% 
+        transform: translateY(0)
+    20%
+        transform: translateY(-80px)
+    35% 
+        transform: translateY(-80px)
+    38% 
+        transform: translateY(-100px)
+    45% 
+        transform: translateY(0)
+    100% 
+        transform: translateY(0)
+    
+@keyframes slide-three
+    0% 
+        transform: translateY(-90px)
+    40%
+        transform: translateY(-90px)
+    45%
+        transform: translateY(-170px)
+    60% 
+        transform: translateY(-170px)
+    63% 
+        transform: translateY(-190px)
+    70% 
+        transform: translateY(-90px)
+    100% 
+        transform: translateY(-90px)
+    
+@keyframes slide-four
+    0% 
+        transform: translateY(-180px)
+    65% 
+        transform: translateY(-180px)
+    70% 
+        transform: translateY(-250px)
+    85% 
+        transform: translateY(-250px)
+    88% 
+        transform: translateY(-270px)
+    95% 
+        transform: translateY(-180px)
+    100% 
+        transform: translateY(-180px)
+    

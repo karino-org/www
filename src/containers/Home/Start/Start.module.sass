@@ -5,11 +5,69 @@
 
 .title
     text-align: center
+    +t
+        font-size: 30.63px !important
+    +m
+        font-size: 25.63px !important
 
 .imageWrapper
     margin: 30px 0 30px
+    +m
+        display: none
     img
         width: 100%
+
+.resStep
+    display: none
+    +m
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-top: 20px
 .banner
+    width: 100%
     img
+        border-radius: 15px
+        object-fit: cover
+        object-position: center
         width: 100%
+        +m
+            height: 160px
+            margin-top: 35px
+
+
+
+.circle
+    @include center-all
+    font-size: 28.83px !important
+    font-weight: 700 !important
+    background: $p2
+    border: 3px solid $p4
+    border-radius: 50%
+    width: 65px
+    height: 65px
+    color: $n10
+
+.box
+    border-radius: 10px
+    border: 2.5px solid $p4
+    width: 280px
+    padding: 10px 28px
+
+.boxTitle
+    text-align: center
+    margin-bottom: 15px
+
+.description
+    color: $n6
+    direction: rtl
+    text-align: center
+    margin-bottom: 18px
+
+.boxImage
+    display: flex
+    justify-content: center
+.line
+    width: 2.5px
+    height: 15px
+    background: $p4
