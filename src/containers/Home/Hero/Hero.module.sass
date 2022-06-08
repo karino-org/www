@@ -7,6 +7,9 @@
 .titleWrapper
     display: flex
     direction: rtl
+    +m  
+        display: block
+        text-align: center
     >h1
         display: inline
 
@@ -14,6 +17,10 @@
     height: 70px
     overflow: hidden
     margin-right: 5px
+    +x
+        height: 55px
+    +t
+        height: 50px
     h1
         margin-bottom: 10px
         color: $primary
@@ -21,17 +28,34 @@
 
 .Animation1
     animation: slide-one 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both
+    +x
+        animation: slide-one-3 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both
+    +t
+        animation: slide-one-2 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both
+
 
 .Animation2
     animation: slide-two 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both
+    +x
+        animation: slide-two-3 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both
+    +t
+        animation: slide-two-2 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both
 
 
 .Animation3
     animation: slide-three 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both
+    +x
+        animation: slide-three-3 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both
+    +t
+        animation: slide-three-2 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both
 
 
 .Animation4
     animation: slide-four 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both
+    +x
+        animation: slide-four-3 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both
+    +t
+        animation: slide-four-2 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both
 
 
 .heroWrapper
@@ -43,8 +67,15 @@
         grid-template-columns: 1fr
 
 .hero
+    +m
+        margin: 0 auto
     img
         width: 100%
+        min-width: 300px
+        +d
+            min-width: 250px
+        +m
+            max-width: 350px
 
 .bannerWrapper
     display: grid
@@ -53,24 +84,55 @@
     margin-top: 82px
     +m
         grid-template-columns: 1fr
+        justify-items: center
     img
         width: 100%
+        +m
+            max-width: 350px
 
 .servicesWrapper
     direction: rtl
     margin-right: -50px
-
+    +m
+        margin-right: 0
+        h5
+            text-align: center
 .services
     display: flex
     gap: 15px
     flex-wrap: wrap
     margin-top: 20px
+    +m
+        height: 50px
+        width: 94vw
+        overflow-y: scroll
+        flex-wrap: nowrap
+        +s
+            min-width: 280px
+        +m
+            button
+                &:nth-child(1)
+                    min-width: 158px
+                &:nth-child(2)
+                    min-width: 152px
+                &:nth-child(3)
+                    min-width: 176px
+                &:nth-child(4)
+                    min-width: 112px
+                &:nth-child(5)
+                    min-width: 125px
+                &:nth-child(6)
+                    min-width: 101px
+                &:nth-child(7)
+                    min-width: 121px
+                
 
 .serviceTitle
     @include center-all
     border: 1px solid $n4
     border-radius: 50px
     height: 31px
+    box-sizing: border-box
     padding: 0 15px
     p
         display: inline
@@ -84,6 +146,7 @@
     border-radius: 50px
     height: 31px
     padding: 0 15px
+    min-width: 110px
     p
         display: inline
         span
@@ -93,6 +156,10 @@
     width: 100%
     overflow: hidden
     margin-top: 44px
+    +m
+        max-width: 90vw
+        min-width: 280px
+
 .sliderItem
     text-align: center
     img
@@ -119,6 +186,42 @@
     100% 
         transform: translateY(0)
     
+@keyframes slide-one-2
+    0% 
+        transform: translateY(0)
+    10% 
+        transform: translateY(0)
+    13%
+        transform: translateY(-20px)
+    20%
+        transform: translateY(100px)
+    50% 
+        transform: translateY(100px)
+    87% 
+        transform: translateY(100px)
+    92% 
+        transform: translateY(0)
+    100% 
+        transform: translateY(0)
+
+@keyframes slide-one-3
+    0% 
+        transform: translateY(0)
+    10% 
+        transform: translateY(0)
+    13%
+        transform: translateY(-20px)
+    20%
+        transform: translateY(100px)
+    50% 
+        transform: translateY(100px)
+    87% 
+        transform: translateY(100px)
+    92% 
+        transform: translateY(0)
+    100% 
+        transform: translateY(0)
+    
 @keyframes slide-two
     0% 
         transform: translateY(0)
@@ -126,30 +229,94 @@
         transform: translateY(0)
     20%
         transform: translateY(-80px)
-    35% 
+    33% 
         transform: translateY(-80px)
-    38% 
+    36% 
         transform: translateY(-100px)
-    45% 
+    43% 
         transform: translateY(0)
     100% 
         transform: translateY(0)
+
+@keyframes slide-two-2
+    0% 
+        transform: translateY(50px)
+    15% 
+        transform: translateY(50px)
+    20%
+        transform: translateY(-50px)
+    33% 
+        transform: translateY(-50px)
+    36% 
+        transform: translateY(-70px)
+    45% 
+        transform: translateY(50px)
+    100% 
+        transform: translateY(50px)
+@keyframes slide-two-3
+    0% 
+        transform: translateY(40px)
+    15% 
+        transform: translateY(40px)
+    20%
+        transform: translateY(-60px)
+    33% 
+        transform: translateY(-60px)
+    36% 
+        transform: translateY(-80px)
+    45% 
+        transform: translateY(40px)
+    100% 
+        transform: translateY(40px)
     
 @keyframes slide-three
     0% 
         transform: translateY(-90px)
-    40%
+    39%
         transform: translateY(-90px)
-    45%
+    44%
         transform: translateY(-170px)
-    60% 
+    59% 
         transform: translateY(-170px)
-    63% 
+    62% 
         transform: translateY(-190px)
-    70% 
+    69% 
         transform: translateY(-90px)
     100% 
         transform: translateY(-90px)
+
+@keyframes slide-three-2
+    0% 
+        transform: translateY(-20px)
+    40%
+        transform: translateY(-20px)
+    45%
+        transform: translateY(-100px)
+    60% 
+        transform: translateY(-100px)
+    63% 
+        transform: translateY(-120px)
+    70% 
+        transform: translateY(-20px)
+    100% 
+        transform: translateY(20px)
+
+@keyframes slide-three-3
+    0% 
+        transform: translateY(-50px)
+    40%
+        transform: translateY(-50px)
+    45%
+        transform: translateY(-130px)
+    60% 
+        transform: translateY(-130px)
+    63% 
+        transform: translateY(-150px)
+    70% 
+        transform: translateY(-50px)
+    100% 
+        transform: translateY(-50px)
+
     
 @keyframes slide-four
     0% 
@@ -158,12 +325,43 @@
         transform: translateY(-180px)
     70% 
         transform: translateY(-250px)
-    85% 
+    83% 
         transform: translateY(-250px)
-    88% 
+    86% 
         transform: translateY(-270px)
-    95% 
+    93% 
         transform: translateY(-180px)
     100% 
         transform: translateY(-180px)
     
+@keyframes slide-four-2
+    0% 
+        transform: translateY(-73px)
+    65% 
+        transform: translateY(-73px)
+    70% 
+        transform: translateY(-153px)
+    83% 
+        transform: translateY(-153px)
+    86% 
+        transform: translateY(-173px)
+    93% 
+        transform: translateY(-73px)
+    100% 
+        transform: translateY(-73px)
+    
+@keyframes slide-four-3
+    0% 
+        transform: translateY(-110px)
+    65% 
+        transform: translateY(-110px)
+    70% 
+        transform: translateY(-190px)
+    83% 
+        transform: translateY(-190px)
+    86% 
+        transform: translateY(-210px)
+    93% 
+        transform: translateY(-110px)
+    100% 
+        transform: translateY(-110px)

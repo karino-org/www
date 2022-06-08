@@ -1,10 +1,14 @@
 
 .bid-slider
     position: static
+    display: flex
+    flex-direction: column
+    justify-content: center
+    +m
+        min-width: 280px
+
     .slick-list
         overflow: visible
-        +s
-            margin: 0 -215px 0 0
     .slick-track
         @include dis-flex
     .slick-slide
@@ -22,17 +26,24 @@
             flex-grow: 1
     .slick-arrow
         position: absolute
+        
     .slick-prev
-        right: initial
         z-index: 6
-        margin-top: 50px
-        margin-left: -50px
+        margin-left: -30px
+        +m
+            left: 20px
+            margin-left: 0
+            margin-top: 0
     .slick-next
-        margin-top: -110px
         right: 170px
+        +d
+            margin: 0
+            right: 20px
+        +s
+                display: flex
 
+    
     .slick-dots
-        bottom: -80px
 
         button
             &::before

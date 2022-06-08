@@ -13,7 +13,8 @@
         grid-template-areas: "header""image""detail""btn"
         grid-template-columns: 1fr
         justify-content: center
-
+        max-height: 800px
+        transform: translateY(-90px)
 
 .imageWrapper
     grid-area: image
@@ -32,14 +33,20 @@
     grid-area: header
     direction: rtl
     margin-top: 100px
+    +m
+        text-align: center
 .detail
     grid-area: detail
     color: $n6
     direction: rtl
+    +m
+        text-align: center
 
 .downloadBtn
     grid-area: btn
     margin-bottom: 100px
+    +m
+        margin-bottom: 0
     >div
         justify-content: flex-end
         display: flex
@@ -50,3 +57,8 @@
         >button
             width: 175px
             cursor: pointer
+            +a
+                max-width: 130px
+            img
+                +a
+                    max-width: 130px

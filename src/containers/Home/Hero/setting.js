@@ -22,7 +22,7 @@ export const settings = {
     ),
     responsive: [
       {
-        breakpoint: 1179,
+        breakpoint: 1400,
         settings: {
           slidesToShow: 3,
         },
@@ -34,7 +34,7 @@ export const settings = {
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 474,
         settings: {
           slidesToShow: 1,
           infinite: true,
