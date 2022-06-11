@@ -1,6 +1,5 @@
 // package
 import React from "react";
-
 // styles
 import styles from "./PageLayout.module.sass";
 
@@ -10,11 +9,11 @@ import Footer from "../Footer";
 
 const PageLayout = ({Component,pageProps}) => {
     return (
-        <div className={styles.wrapper}>
-            <Header />
-            <Component {...pageProps} />
-            <Footer />
-        </div>
+            <div className={styles.wrapper}>
+                <Header />
+                <Component {...pageProps} />
+                <Footer />
+            </div>
     );
 };
 

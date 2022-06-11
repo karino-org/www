@@ -1,1 +1,106 @@
 @import ../../styles/helpers
+
+
+.wwwwww
+    padding: 0 50px
+    width: 100%
+    position: fixed
+    bottom: 30px
+    z-index: 15
+    direction: rtl
+
+.navBarWrapper
+    display: flex
+    align-items: center
+    background: $primary
+    border-radius: 20px
+    height: 100px
+    transition: all 0.3s ease-in
+    +w
+        height: 85px
+    +x
+        height: 70px
+
+.openNavBarWrapper
+    width: 100%
+
+.closeNavBarWrapper
+    width: 122px
+
+.openNavBar
+    @include center-all
+    width: 122px
+    gap: 5px
+    height: 100%
+    button
+        color: $n10
+        +x
+            font-size: 14px !important
+
+.closeNavbar
+    @include center-all
+    width: 130px
+    min-width: 130px
+    gap: 5px
+    button
+        color: $n10
+        +x
+            font-size: 14px !important
+.arrow
+    transform: rotate(180deg)
+
+
+.openNavItemWrapper
+    display: none
+    transition: all 0.3s ease-in
+
+.closeNavItemWrapper
+    display: flex
+    justify-content: center
+    width: 100%
+    transition: all 0.3s ease-in
+    gap: 25px
+    align-items: stretch
+    >div
+        animation: opacity 0.6s linear both
+        min-width: 80px
+        +x
+            min-width: 40px
+        
+.navItem
+    display: flex
+    flex-direction: column
+    align-items: center
+    border-left: 2px solid $n10
+    padding-left: 35px
+    +w
+        padding-left: 15px
+    &:last-child
+        border: none
+    img
+        width: 50px
+        height: 50px
+        +w
+            width: 30px
+            height: 30px
+        +x
+            width: 25px
+            height: 25px
+    p
+        color: $n10
+        text-align: center
+        +w
+            font-size: 14px !important
+        +x
+            font-size: 12px !important
+
+
+
+@keyframes opacity
+    0%
+        opacity: 0
+    50%
+        opacity: 0
+    100%
+        opacity: 1
+        

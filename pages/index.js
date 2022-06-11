@@ -1,5 +1,5 @@
-import { Fragment } from 'react';
 import Home from '../src/containers/Home/index';
+import { Fragment } from 'react';
 
 const Homepage = () => {
 
@@ -10,10 +10,4 @@ const Homepage = () => {
   );
 };
 
-export const getServerSideProps = async (ctx) => {
-  return {
-    props: {
-    },
-  }
-}
 export default Homepage;
