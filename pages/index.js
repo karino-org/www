@@ -9,5 +9,12 @@ const Homepage = () => {
     </Fragment>
   );
 };
+export const getServerSideProps = async (ctx) => {
+  return {
+    props: {
+    },
+  }
+
+}
 
 export default Homepage;

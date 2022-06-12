@@ -1,5 +1,6 @@
 // package
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import useWindowSize from "../../hooks/useWindiwsSize";
 
 // styles
 import styles from "./Home.module.sass";
@@ -10,6 +11,7 @@ import Download from "./Download";
 import Start from "./Start";
 import Hero from "./Hero";
 import Icon from "../../components/Icon";
+import Head from "next/head";
 
 const Home = () => {
     
@@ -53,32 +55,62 @@ const Home = () => {
     ]
     const handler = () => {
         setNavOpener(!navOpener)
-        if(service === "تمام خدمات") setService("بستن")
-        if(service === "بستن" ) setService("تمام خدمات")
+        if(window.width > 1023 ){
+            if(service === "تمام خدمات") setService("بستن")
+            if(service === "بستن" ) setService("تمام خدمات")
+        }
     }
-    const [navOpener , setNavOpener] = useState(false);
+    const [navOpener , setNavOpener] = useState(true);
+    const window = useWindowSize();
     const [service,setService] = useState("تمام خدمات");
+    useEffect(() => {
+        if(window.width < 1023){
+            setService("تمام خدمات")
+        }
+        if(!navOpener && window.width > 1023){
+            setService("بستن")
+        }
+    },[window]);
+    
     return (
         <>
+            <Head>
+            <link rel="shortcut icon" href="/images/favicon.ico" />
+            <title>استاد کار | Ostad Kar</title>
+            </Head>
             <div className="container">
                 <Hero />
                 <Start />
                 <Download />
             </div>
-            <div className={styles.wwwwww}>
+            <div className={styles.wrapper}>
                 <div className={cn(styles.navBarWrapper , navOpener ? styles.closeNavBarWrapper:styles.openNavBarWrapper)}>
-                    <div className={cn(navOpener ? styles.openNavBar : styles.closeNavbar)}>
-                        {!navOpener && <Icon name="arrow" size="12" className={styles.arrow} />}
-                        <button onClick={handler} className={"sub-1"}>{service}</button>
-                        {navOpener && <Icon name="arrow" size="12"  />}
+                    <div className={navOpener ? styles.closetitleWrapper : styles.titleWrapper}>
+                        <div className={cn(navOpener ? styles.openNavBar : styles.closeNavbar)}>
+                            {
+                                !navOpener && 
+                                <Icon name="arrow" size="12" className={styles.arrow} />
+                            }
+                                <button onClick={handler} className={"sub-1"}>{service}</button>
+                            {
+                                navOpener &&
+                                <Icon name="arrow" size="12" className={styles.arrow2}  />
+                            }
+                        </div>
+                        {
+                            !navOpener &&
+                            <button onClick={() => setNavOpener(true)} className={cn(styles.backBtn)}>
+                                <Icon name="backBtn" size="25" />
+                            </button>
+                        }
                     </div>
                     <div className={navOpener ? styles.openNavItemWrapper : styles.closeNavItemWrapper}>
                         {
                             navData.map((x) =>(
-                            <div className={styles.navItem}>
+                            <button className={styles.navItem}>
                                 <img src={x.icon} /> 
                                 <p className="body-1">{x.name}</p>
-                            </div>
+                            </button>
                             ))
                         }
                     </div>

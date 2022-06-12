@@ -6,11 +6,11 @@ import Slider from 'react-slick';
 import styles from "./Hero.module.sass";
 
 // data
-import { AA,BB,CC,DD,EE,FF,GG } from "./serviceData";
+import { Health,Doctor,CC,DD,EE,FF,GG } from "./serviceData";
 import { settings } from "./setting";
 
 const Hero = () => {
-    const [activeService , setActiveService] = useState("a");
+    const [activeService , setActiveService] = useState("Health");
 
     return (
         <div className={styles.wrapper}>
@@ -32,14 +32,14 @@ const Hero = () => {
                         <h5>دنبال چه خدماتی هستی؟</h5>
                         <div className={styles.services}>
                             <button
-                                className={activeService === "a" ? styles.activeService : styles.serviceTitle}
-                                onClick={() => setActiveService("a")}
+                                className={activeService === "Health" ? styles.activeService : styles.serviceTitle}
+                                onClick={() => setActiveService("Health")}
                             >
                                 <p className="sub-2">بهداشت و نظافت <span>٢٣</span> </p>
                             </button>
                             <button
-                                className={activeService === "b" ? styles.activeService : styles.serviceTitle}
-                                onClick={() => setActiveService("b")}
+                                className={activeService === "Doctor" ? styles.activeService : styles.serviceTitle}
+                                onClick={() => setActiveService("Doctor")}
                             >
                                 <p className="sub-2">سلامت و پزشکی <span>۱۰</span></p>
                             </button>
@@ -78,7 +78,7 @@ const Hero = () => {
                     <div className={styles.serviceSlider}>
                     <Slider className="bid-slider" {...settings}>
                         {
-                            activeService === "a"&& AA.map((x) => (
+                            activeService === "Health"&& Health.map((x) => (
                                 <div className={styles.sliderItem}>
                                     <img src={x.image} />
                                     <p>{x.name}</p>
@@ -86,7 +86,7 @@ const Hero = () => {
                             ))
                         }
                         {
-                            activeService === "b"&& BB.map((x) => (
+                            activeService === "Doctor"&& Doctor.map((x) => (
                                 <div className={styles.sliderItem}>
                                     <img src={x.image} />
                                     <p>{x.name}</p>

@@ -45,6 +45,13 @@ const icons = {
       <path d="M0.899976 7.80005L6.59998 13.4C6.99998 13.8 7.59998 13.8 7.99998 13.4C8.39998 13 8.39998 12.4 7.99998 12L3.09998 7.00005L7.99998 2.00005C8.39998 1.60005 8.39998 1.00005 7.99998 0.600049C7.79998 0.400049 7.59998 0.300049 7.29998 0.300049C6.99998 0.300049 6.79998 0.400049 6.59998 0.600049L0.899976 6.20005C0.499976 6.70005 0.499976 7.30005 0.899976 7.80005C0.899976 7.70005 0.899976 7.70005 0.899976 7.80005Z" fill="white"/>
     </svg>
     ),
+    backBtn: (
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#F3F4F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15 9L9 15" stroke="#F3F4F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 9L15 15" stroke="#F3F4F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>      
+    ),
 }
 
 const Icon = (props) => {

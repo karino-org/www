@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <div className={cn("container",styles.wrapper)}>
             <div className={styles.phone}>
-                <button className={styles.downloadBtn}><Icon name="download" size="20" /> دانلود اپلیکیشن </button>
+                <a className={styles.downloadBtn}  href="#download" ><Icon name="download" size="20"/> دانلود اپلیکیشن </a>
                 <p className={cn("sub-1" , styles.phoneNumber)}><Icon name="phone" size="20" />۰۲۱ - ۲۴۴ ۳۴ ۴۳</p>
             </div>
             <div className={styles.logoWrapper}>

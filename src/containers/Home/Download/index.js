@@ -5,7 +5,7 @@ import React from "react";
 import styles from "./Download.module.sass";
 const Download = () => {
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} id="download">
             <div className={styles.imageWrapper}>
                 <img src="/images/landing/art-2.png" alt="download" />
             </div>
